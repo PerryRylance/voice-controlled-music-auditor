@@ -111,6 +111,7 @@ namespace VoiceControlledMusicAuditor
                 PlayFile(file);
                 recognizer.RecognizeAsync(RecognizeMode.Multiple);
 
+                Console.WriteLine(files.Count + " songs remain");
                 Console.WriteLine("Playing: " + file);
 
                 while (waveOut.PlaybackState == PlaybackState.Playing)
